@@ -1,0 +1,5 @@
+docker run --name bind -it --rm \
+  -e "WEBMIN_ENABLED=false" \
+  --publish 53:53/tcp --publish 53:53/udp --publish 10000:10000/tcp \
+  --volume "`pwd`/data":/data \
+  sameersbn/bind:9.9.5-20170626
